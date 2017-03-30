@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func createNavController() {
-        let navController = UINavigationController()
+        let homeVC = HomeViewController()
+        let navController = UINavigationController(rootViewController: homeVC)
         navController.setNavigationBarHidden(true, animated: false)
         navController.view.layer.backgroundColor = UIColor.white.cgColor
         
@@ -29,22 +30,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navBar.shadowImage = UIImage()
         navBar.isTranslucent = true
         
+        UINavigationBar.appearance().tintColor = UIColor.lightGray
+        UINavigationBar.appearance().isOpaque = true
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -500, vertical: -500), for: .default)
+        if let barFont = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 20) {
+            UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: barFont, NSForegroundColorAttributeName: UIColor.lightGray])
+        }
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
         //let backBarImage = UIImage(named: "backArrowNavIcon")
         //let renderedBackBarImage = backBarImage?.withRenderingMode(.alwaysTemplate)
         //navBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         //navBar.backIndicatorImage = renderedBackBarImage
         //navBar.backIndicatorImage?.withAlignmentRectInsets(UIEdgeInsetsMake(10, 10, 10, 10))
         //navController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        UINavigationBar.appearance().tintColor = UIColor.lightGray
-        UINavigationBar.appearance().isOpaque = true
-        //UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: UIFont(name: "GothamRounded-Medium", size: 17)!, NSForegroundColorAttributeName: UIColor.lightGray])
-        //UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -500, vertical: -500), for: .default)
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navController
-        let homeVC = HomeViewController()
-            navController.setViewControllers([homeVC], animated: false)
-        window?.makeKeyAndVisible()
+        //UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: UIFont(name: "GothamRounded-Medium", size: 17)!, NSForegroundColorAttributeName: UIColor.lightGray])
+        
+        //UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -500, vertical: -500), for: .default)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

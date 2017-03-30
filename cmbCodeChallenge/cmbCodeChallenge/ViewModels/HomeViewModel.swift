@@ -60,7 +60,7 @@ class HomeViewModel: NSObject {
         let teammate = teammateArray[teammateIndex]
         APIManager.fetchImage(fromURL: teammate.avatarUrl) { [weak self] image in
             if let thumbnailImage = image {
-                teammate.avatar = thumbnailImage
+                self?.teammateArray[teammateIndex].avatar = thumbnailImage
                 self?.imageDictionary[indexPath] = thumbnailImage
             }
             self?.delegate?.imageDidLoad(atIndexPath: indexPath)

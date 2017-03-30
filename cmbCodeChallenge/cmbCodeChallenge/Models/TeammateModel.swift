@@ -18,7 +18,7 @@ struct TeammateConstants {
     static let title = "title"
 }
 
-class TeammateModel: NSObject {
+struct TeammateModel {
     
     fileprivate typealias Constants = TeammateConstants
     var id: String

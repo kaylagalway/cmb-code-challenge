@@ -17,7 +17,6 @@
 		CD6E94811E8B061E0099E01D /* cmbCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E94801E8B061E0099E01D /* cmbCodeChallengeTests.swift */; };
 		CD6E948C1E8B061E0099E01D /* cmbCodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E948B1E8B061E0099E01D /* cmbCodeChallengeUITests.swift */; };
 		CDC36E531E8C32AE002E55C0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E521E8C32AE002E55C0 /* HomeViewModel.swift */; };
-		CDC36E551E8C32E6002E55C0 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E541E8C32E6002E55C0 /* HomeCollectionViewController.swift */; };
 		CDC36E571E8C330D002E55C0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E561E8C330D002E55C0 /* HomeTableViewController.swift */; };
 		CDC36E5F1E8C3466002E55C0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E5E1E8C3466002E55C0 /* APIManager.swift */; };
 		CDC36E611E8C379B002E55C0 /* TeammateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E601E8C379B002E55C0 /* TeammateModel.swift */; };
@@ -27,6 +26,7 @@
 		CDC36E6A1E8C4029002E55C0 /* TeamContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E691E8C4029002E55C0 /* TeamContentManager.swift */; };
 		CDC36E6C1E8C59FE002E55C0 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E6B1E8C59FE002E55C0 /* HomeCollectionViewCell.swift */; };
 		CDC36E6E1E8D4DA4002E55C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E6D1E8D4DA4002E55C0 /* HomeViewController.swift */; };
+		CDC36E701E8D5D65002E55C0 /* TeammateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E6F1E8D5D65002E55C0 /* TeammateDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,6 @@
 		CD6E948B1E8B061E0099E01D /* cmbCodeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmbCodeChallengeUITests.swift; sourceTree = "<group>"; };
 		CD6E948D1E8B061E0099E01D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC36E521E8C32AE002E55C0 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ViewModels/HomeViewModel.swift; sourceTree = "<group>"; };
-		CDC36E541E8C32E6002E55C0 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCollectionViewController.swift; path = Views/HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		CDC36E561E8C330D002E55C0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = Views/HomeTableViewController.swift; sourceTree = "<group>"; };
 		CDC36E5E1E8C3466002E55C0 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = APIClients/APIManager.swift; sourceTree = "<group>"; };
 		CDC36E601E8C379B002E55C0 /* TeammateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeammateModel.swift; path = Models/TeammateModel.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		CDC36E691E8C4029002E55C0 /* TeamContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamContentManager.swift; sourceTree = "<group>"; };
 		CDC36E6B1E8C59FE002E55C0 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCollectionViewCell.swift; path = Views/HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDC36E6D1E8D4DA4002E55C0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CDC36E6F1E8D5D65002E55C0 /* TeammateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeammateDetailViewController.swift; path = Views/TeammateDetailViewController.swift; sourceTree = "<group>"; };
 		FC63C2B1F5D07C77062F2DDB /* Pods-cmbCodeChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmbCodeChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cmbCodeChallengeUITests/Pods-cmbCodeChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD4164AE98DC36AB617C1F0A /* Pods_cmbCodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmbCodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC36E6D1E8D4DA4002E55C0 /* HomeViewController.swift */,
-				CDC36E541E8C32E6002E55C0 /* HomeCollectionViewController.swift */,
+				CDC36E6F1E8D5D65002E55C0 /* TeammateDetailViewController.swift */,
 				CDC36E6B1E8C59FE002E55C0 /* HomeCollectionViewCell.swift */,
 				CDC36E561E8C330D002E55C0 /* HomeTableViewController.swift */,
 			);
@@ -517,10 +517,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC36E701E8D5D65002E55C0 /* TeammateDetailViewController.swift in Sources */,
 				CDC36E5F1E8C3466002E55C0 /* APIManager.swift in Sources */,
 				CDC36E671E8C4009002E55C0 /* CacheManager.swift in Sources */,
 				CDC36E651E8C3A4E002E55C0 /* FullTeamModel.swift in Sources */,
-				CDC36E551E8C32E6002E55C0 /* HomeCollectionViewController.swift in Sources */,
 				CDC36E631E8C37B3002E55C0 /* ContentItemModel.swift in Sources */,
 				CDC36E531E8C32AE002E55C0 /* HomeViewModel.swift in Sources */,
 				CDC36E6C1E8C59FE002E55C0 /* HomeCollectionViewCell.swift in Sources */,
@@ -683,6 +683,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4WHCWF2WQ4;
 				INFOPLIST_FILE = cmbCodeChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kayla.cmbCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -697,6 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4WHCWF2WQ4;
 				INFOPLIST_FILE = cmbCodeChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kayla.cmbCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
