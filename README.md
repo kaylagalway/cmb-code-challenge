@@ -1,2 +1,4 @@
 # cmb-code-challenge
-CMB Code Challenge
+CMB Challenge
+
+Collection view / detail view app
