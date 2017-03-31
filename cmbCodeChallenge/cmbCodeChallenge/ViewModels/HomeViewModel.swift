@@ -50,7 +50,7 @@ class HomeViewModel: NSObject {
         if imageDictionary[indexPath] != nil {
             return imageDictionary[indexPath]
         }
-        //if not in cache, download
+        //if not in image dictionary, download
         fetchImage(atIndexPath: indexPath)
         return nil
     }
@@ -61,6 +61,7 @@ class HomeViewModel: NSObject {
         APIManager.fetchImage(fromURL: teammate.avatarUrl) { [weak self] image in
             if let thumbnailImage = image {
                 self?.teammateArray[teammateIndex].avatar = thumbnailImage
+                //save image into image dict for reuse later
                 self?.imageDictionary[indexPath] = thumbnailImage
             }
             self?.delegate?.imageDidLoad(atIndexPath: indexPath)

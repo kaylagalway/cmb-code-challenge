@@ -13,6 +13,7 @@ import Alamofire
 struct APIManager {
     
     //Method to demonstrate same behavior as async JSON fetch
+    //In this case fetching hard coded JSON
     static func fetchImageJson(withCompletion completion: @escaping ([[String: Any]]?) -> Void) {
         let teammatesJson = FullTeamModel().teamArray
         completion(teammatesJson)

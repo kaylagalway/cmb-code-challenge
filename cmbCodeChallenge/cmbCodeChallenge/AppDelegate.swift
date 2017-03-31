@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = UINavigationController(rootViewController: homeVC)
         navController.setNavigationBarHidden(true, animated: false)
         navController.view.layer.backgroundColor = UIColor.white.cgColor
-        
         let navBar = navController.navigationBar
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.shadowImage = UIImage()
@@ -33,23 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor(colorLiteralRed: 35/255, green: 127/255, blue: 245/255, alpha: 1)
         UINavigationBar.appearance().isOpaque = true
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -500, vertical: -500), for: .default)
-        if let barFont = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 20) {
+        if let barFont = UIFont(name: "AppleSDGothicNeo-Bold", size: 20) {
             UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: barFont, NSForegroundColorAttributeName: UIColor(colorLiteralRed: 255/255, green: 46/255, blue: 127/255, alpha: 1)])
         }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
-        //let backBarImage = UIImage(named: "backArrowNavIcon")
-        //let renderedBackBarImage = backBarImage?.withRenderingMode(.alwaysTemplate)
-        //navBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-        //navBar.backIndicatorImage = renderedBackBarImage
-        //navBar.backIndicatorImage?.withAlignmentRectInsets(UIEdgeInsetsMake(10, 10, 10, 10))
-        //navController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        //UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: UIFont(name: "GothamRounded-Medium", size: 17)!, NSForegroundColorAttributeName: UIColor.lightGray])
-        
-        //UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -500, vertical: -500), for: .default)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

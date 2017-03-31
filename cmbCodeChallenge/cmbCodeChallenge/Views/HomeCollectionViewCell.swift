@@ -30,6 +30,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private func addViewsToCell() {
         addImageViewToCell()
         addLabelToCell()
+        addActivityIndicatorToView()
     }
     
     private func addImageViewToCell() {
@@ -63,10 +64,14 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     private func addActivityIndicatorToView() {
-        let xConstraint = teammateLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
-        let yConstraint = teammateLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(activityIndicator)
+        contentView.bringSubview(toFront: activityIndicator)
+        let xConstraint = activityIndicator.centerXAnchor.constraint(equalTo: teammateImageView.centerXAnchor)
+        let yConstraint = activityIndicator.centerYAnchor.constraint(equalTo: teammateImageView.centerYAnchor)
         xConstraint.isActive = true
         yConstraint.isActive = true
+        activityIndicator.color = UIColor.black
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
     }
