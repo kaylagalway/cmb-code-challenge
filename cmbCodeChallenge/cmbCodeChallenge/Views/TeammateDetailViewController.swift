@@ -12,7 +12,7 @@ import UIKit
 class TeammateDetailViewController: UIViewController {
     
     var teammateImageView: UIImageView!
-    var teammateBio: UITextView!
+    var teammateBioTextView: UITextView!
     var teammate: TeammateModel?
     
     fileprivate let errorAlertString = "Error Loading"
@@ -23,21 +23,21 @@ class TeammateDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        addImageViewWithConstraints()
-        addBioWithConstraints()
-        addTeammateInformation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        addImageViewWithConstraints()
+        addBioWithConstraints()
+        addTeammateInformation()
     }
     
     private func addTeammateInformation() {
         if let chosenTeammate = teammate {
             title = "☕️" + " " + chosenTeammate.firstName + " " + chosenTeammate.lastName + " " + "☕️"
             teammateImageView.image = chosenTeammate.avatar
-            teammateBio.text = chosenTeammate.bio
-            teammateBio.contentSize = teammateBio.bounds.size
+            teammateBioTextView.text = chosenTeammate.bio
+            teammateBioTextView.contentSize = teammateBioTextView.bounds.size
         } else {
             showErrorLoadingTeammateAlert()
         }
@@ -57,28 +57,36 @@ class TeammateDetailViewController: UIViewController {
         view.addSubview(teammateImageView)
         teammateImageView.translatesAutoresizingMaskIntoConstraints = false
         let xConstraint = teammateImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let bottomConstraint = teammateImageView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
-        let topConstraint = teammateImageView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 20)
-        let widthConstraint = teammateImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
+        let topConstraint = teammateImageView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor)
+        let widthConstraint = teammateImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
+        let heightConstraint = teammateImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
         xConstraint.isActive = true
-        bottomConstraint.isActive = true
+        heightConstraint.isActive = true
         widthConstraint.isActive = true
         topConstraint.isActive = true
+        makeImageViewCircular()
+    }
+    
+    private func makeImageViewCircular() {
+        teammateImageView.layoutIfNeeded()
+//        teammateImageView.layer.cornerRadius = teammateImageView.frame.height / 2
+//        teammateImageView.clipsToBounds = true
+//        teammateImageView.layer.borderWidth = 4.0
+//        teammateImageView.layer.borderColor = UIColor(colorLiteralRed: 255/255, green: 46/255, blue: 127/255, alpha: 1).cgColor
     }
     
     private func addBioWithConstraints() {
-        teammateBio = UITextView()
-        teammateBio.textColor = UIColor.blue
-        teammateBio.textAlignment = .center
+        teammateBioTextView = UITextView()
+        teammateBioTextView.textColor = UIColor.gray
+        teammateBioTextView.textAlignment = .left
         let bioFont = UIFont(name: appleGothicFontName, size: 16)
-        teammateBio.font = bioFont
-        teammateBio.textColor = UIColor.brown
-        view.addSubview(teammateBio)
-        teammateBio.translatesAutoresizingMaskIntoConstraints = false
-        let xConstraint = teammateBio.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let topConstraint = teammateBio.topAnchor.constraint(equalTo: teammateImageView.bottomAnchor, constant: 20)
-        let bottomConstraint = teammateBio.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -30)
-        let widthConstraint = teammateBio.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
+        teammateBioTextView.font = bioFont
+        view.addSubview(teammateBioTextView)
+        teammateBioTextView.translatesAutoresizingMaskIntoConstraints = false
+        let xConstraint = teammateBioTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let topConstraint = teammateBioTextView.topAnchor.constraint(equalTo: teammateImageView.bottomAnchor, constant: 10)
+        let bottomConstraint = teammateBioTextView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -10)
+        let widthConstraint = teammateBioTextView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.95)
         xConstraint.isActive = true
         bottomConstraint.isActive = true
         widthConstraint.isActive = true

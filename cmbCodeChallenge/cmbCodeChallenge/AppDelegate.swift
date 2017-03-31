@@ -30,11 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navBar.shadowImage = UIImage()
         navBar.isTranslucent = true
         
-        UINavigationBar.appearance().tintColor = UIColor.lightGray
+        UINavigationBar.appearance().tintColor = UIColor(colorLiteralRed: 35/255, green: 127/255, blue: 245/255, alpha: 1)
         UINavigationBar.appearance().isOpaque = true
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -500, vertical: -500), for: .default)
         if let barFont = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 20) {
-            UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: barFont, NSForegroundColorAttributeName: UIColor.lightGray])
+            UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: barFont, NSForegroundColorAttributeName: UIColor(colorLiteralRed: 255/255, green: 46/255, blue: 127/255, alpha: 1)])
         }
         
         window = UIWindow(frame: UIScreen.main.bounds)

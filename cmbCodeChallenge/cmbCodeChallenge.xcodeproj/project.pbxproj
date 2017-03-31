@@ -16,6 +16,7 @@
 		CD6E94761E8B061D0099E01D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6E94741E8B061D0099E01D /* LaunchScreen.storyboard */; };
 		CD6E94811E8B061E0099E01D /* cmbCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E94801E8B061E0099E01D /* cmbCodeChallengeTests.swift */; };
 		CD6E948C1E8B061E0099E01D /* cmbCodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E948B1E8B061E0099E01D /* cmbCodeChallengeUITests.swift */; };
+		CD8EB3F91E8EB43E007B7397 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8EB3F81E8EB43E007B7397 /* TestView.xib */; };
 		CDC36E531E8C32AE002E55C0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E521E8C32AE002E55C0 /* HomeViewModel.swift */; };
 		CDC36E571E8C330D002E55C0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E561E8C330D002E55C0 /* HomeTableViewController.swift */; };
 		CDC36E5F1E8C3466002E55C0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC36E5E1E8C3466002E55C0 /* APIManager.swift */; };
@@ -66,6 +67,7 @@
 		CD6E94871E8B061E0099E01D /* cmbCodeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cmbCodeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6E948B1E8B061E0099E01D /* cmbCodeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmbCodeChallengeUITests.swift; sourceTree = "<group>"; };
 		CD6E948D1E8B061E0099E01D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8EB3F81E8EB43E007B7397 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		CDC36E521E8C32AE002E55C0 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ViewModels/HomeViewModel.swift; sourceTree = "<group>"; };
 		CDC36E561E8C330D002E55C0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = Views/HomeTableViewController.swift; sourceTree = "<group>"; };
 		CDC36E5E1E8C3466002E55C0 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = APIClients/APIManager.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				CDC36E581E8C3311002E55C0 /* Views */,
 				CD6E946B1E8B061D0099E01D /* AppDelegate.swift */,
 				CD6E946F1E8B061D0099E01D /* Main.storyboard */,
+				CD8EB3F81E8EB43E007B7397 /* TestView.xib */,
 				CD6E94721E8B061D0099E01D /* Assets.xcassets */,
 				CD6E94741E8B061D0099E01D /* LaunchScreen.storyboard */,
 				CD6E94771E8B061D0099E01D /* Info.plist */,
@@ -352,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8EB3F91E8EB43E007B7397 /* TestView.xib in Resources */,
 				CD6E94761E8B061D0099E01D /* LaunchScreen.storyboard in Resources */,
 				CD6E94731E8B061D0099E01D /* Assets.xcassets in Resources */,
 				CD6E94711E8B061D0099E01D /* Main.storyboard in Resources */,
