@@ -84,6 +84,7 @@ extension HomeViewController {
             cell.activityIndicator.stopAnimating()
         }
         cell.teammateImageView.image = teammateImage
+        cell.tag = 0
     }
     
     func showBagelInfo(forCell cell: HomeCollectionViewCell) {
